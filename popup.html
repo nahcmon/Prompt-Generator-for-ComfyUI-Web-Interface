@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComfyUI Prompt Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ComfyUI Prompt Generator</h1>
+
+    <div class="section">
+      <h2>Configuration</h2>
+      <div class="form-group">
+        <label for="lmStudioUrl">LM Studio URL:</label>
+        <input type="text" id="lmStudioUrl" placeholder="http://localhost:1234/v1">
+      </div>
+
+      <div class="form-group">
+        <label for="modelSelect">Model:</label>
+        <select id="modelSelect">
+          <option value="">Select a model...</option>
+        </select>
+        <button id="refreshModels" class="btn-secondary">Refresh Models</button>
+      </div>
+
+      <button id="saveConfig" class="btn-primary">Save Configuration</button>
+      <div id="configStatus" class="status"></div>
+    </div>
+
+    <div class="section">
+      <h2>Generate Prompt</h2>
+
+      <div class="form-group">
+        <label for="promptType">Generation Type:</label>
+        <select id="promptType">
+          <option value="random">Random Prompt</option>
+          <option value="guided">Guided Prompt</option>
+        </select>
+      </div>
+
+      <div id="guidedSection" class="form-group" style="display: none;">
+        <label for="userGuidance">Your Guidance:</label>
+        <textarea id="userGuidance" rows="3" placeholder="Describe what kind of image you want..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="promptStyle">Style:</label>
+        <select id="promptStyle">
+          <option value="realistic">Realistic</option>
+          <option value="artistic">Artistic</option>
+          <option value="anime">Anime</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="scifi">Sci-Fi</option>
+          <option value="portrait">Portrait</option>
+          <option value="landscape">Landscape</option>
+        </select>
+      </div>
+
+      <button id="generatePrompt" class="btn-primary">Generate & Insert Prompt</button>
+      <div id="generateStatus" class="status"></div>
+
+      <div id="promptPreview" class="prompt-preview" style="display: none;">
+        <h3>Generated Prompt:</h3>
+        <div id="positivePrompt" class="prompt-box"></div>
+        <div id="negativePromptContainer" style="display: none;">
+          <h4>Negative Prompt:</h4>
+          <div id="negativePrompt" class="prompt-box"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

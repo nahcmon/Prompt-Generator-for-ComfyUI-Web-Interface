@@ -1,0 +1,12 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="#4CAF50"/>
+
+  <!-- Sparkle icon representing AI/generation -->
+  <path d="M64 20 L68 44 L88 36 L72 56 L96 64 L72 72 L88 92 L68 84 L64 108 L60 84 L40 92 L56 72 L32 64 L56 56 L40 36 L60 44 Z" fill="white" opacity="0.9"/>
+
+  <!-- Text cursor/prompt icon -->
+  <rect x="44" y="70" width="40" height="4" rx="2" fill="white" opacity="0.7"/>
+  <rect x="44" y="80" width="30" height="4" rx="2" fill="white" opacity="0.5"/>
+  <rect x="44" y="90" width="35" height="4" rx="2" fill="white" opacity="0.6"/>
+</svg>
