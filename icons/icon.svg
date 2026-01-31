@@ -1,12 +1,27 @@
-<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="128" height="128" rx="24" fill="#4CAF50"/>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bubbleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+  </defs>
 
-  <!-- Sparkle icon representing AI/generation -->
-  <path d="M64 20 L68 44 L88 36 L72 56 L96 64 L72 72 L88 92 L68 84 L64 108 L60 84 L40 92 L56 72 L32 64 L56 56 L40 36 L60 44 Z" fill="white" opacity="0.9"/>
+  <!-- Speech bubble main shape -->
+  <ellipse cx="256" cy="280" rx="220" ry="180" fill="url(#bubbleGradient)"/>
 
-  <!-- Text cursor/prompt icon -->
-  <rect x="44" y="70" width="40" height="4" rx="2" fill="white" opacity="0.7"/>
-  <rect x="44" y="80" width="30" height="4" rx="2" fill="white" opacity="0.5"/>
-  <rect x="44" y="90" width="35" height="4" rx="2" fill="white" opacity="0.6"/>
+  <!-- Speech bubble tail -->
+  <path d="M 340 420 Q 380 480, 400 460 Q 360 440, 340 420" fill="#2E7D32"/>
+
+  <!-- Small connector dot (like in the original) -->
+  <circle cx="410" cy="200" r="18" fill="#81C784"/>
+  <line x1="380" y1="250" x2="405" y2="210" stroke="#81C784" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Sparkle/star icon -->
+  <g transform="translate(256, 280)">
+    <!-- Four-pointed star -->
+    <path d="M 0,-50 L 10,-10 L 50,0 L 10,10 L 0,50 L -10,10 L -50,0 L -10,-10 Z" fill="white" opacity="0.95"/>
+
+    <!-- Center circle -->
+    <circle cx="-60" cy="0" r="18" fill="white" opacity="0.95"/>
+  </g>
 </svg>
